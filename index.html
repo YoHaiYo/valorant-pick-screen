@@ -16,20 +16,12 @@
       background-position: center center;
       overflow: hidden;
     }
-    .bg-screen {
-      /* height: 100vh;
-      background-image: url(./img/valorant_pick_bg.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      overflow: hidden; */
-    }
     h1 {
       position: absolute;
-      right: 230px;
-      top: -50px;
+      left: 73vw;
+      /* top: -0px; */
       color: #E6ECAF;
-      font-size: 130px;
+      font-size: 100px;
     }
 
     .container {      
@@ -43,10 +35,12 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      border: 1px solid orange;
+      /* border: 1px solid orange; */
     }
     .agents img {
       margin: 5px;
+      border: 2px solid gray;      
+      cursor: pointer;
     }
     
     .full-stand {
@@ -59,18 +53,22 @@
 </head>
 
 <body>
- <div class="bg-screen"></div>
+
+ <!-- 요원 풀샷 -->
+ <img class="full-stand" src="./img/agent_full_jett.png" alt="">
+ <!-- <img class="full-stand" src="./img/agent_full_astra.png" alt=""> -->
+
 
   <h1>제트</h1>
-  <img class="full-stand" src="./img/jett-full.png" alt="">
+  <!-- <h1>아스트라</h1> -->
 
   <div class="container">
     <img src="./img/pick-bar.png" alt="">
     <div class="agents">
       <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
+      <img src="./img/agent_avatar_astra.png" alt="">
+      <img src="./img/agent_avatar_breach.png" alt="">
+      <img src="./img/agent_avatar_brimstone.png" alt="">
       <img src="./img/agent_avatar_jett.png" alt="">
       <img src="./img/agent_avatar_jett.png" alt="">
       <img src="./img/agent_avatar_jett.png" alt="">
@@ -79,6 +77,9 @@
     </div>
   </div>
 
+  <script>
+
+  </script>
 </body>
 
 </html>
