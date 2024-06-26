@@ -8,14 +8,21 @@
   <style>
     body {
       margin: 0;
-    }
-    .bg-screen {
+
       height: 100vh;
       background-image: url(./img/valorant_pick_bg.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       overflow: hidden;
+    }
+    .bg-screen {
+      /* height: 100vh;
+      background-image: url(./img/valorant_pick_bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden; */
     }
     h1 {
       position: absolute;
@@ -44,6 +51,7 @@
     
     .full-stand {
       position: absolute;
+      top: 0
       /* height: 100px; */
     }
 
@@ -51,8 +59,8 @@
 </head>
 
 <body>
+ <div class="bg-screen"></div>
 
- <div class="bg-screen">
   <h1>제트</h1>
   <img class="full-stand" src="./img/jett-full.png" alt="">
 
@@ -70,7 +78,6 @@
       <img src="./img/agent_avatar_jett.png" alt="">
     </div>
   </div>
- </div>
 
 </body>
 
