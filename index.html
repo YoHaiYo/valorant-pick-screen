@@ -1,95 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valorant Pick Screen</title>
-    <style>
-      /* 기본 클래스 */
-      body {
-        margin: 0;
 
-        height: 100vh;
-        background-image: url(./img/valorant_pick_bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        overflow: hidden;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valorant Pick Screen</title>
+  <style>
+    /* 기본 클래스 */
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url(./img/valorant_pick_bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden;
+    }
 
-      .full-stand {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+    .full-stand {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      opacity: 0;
+      transition: 0.75s;
+    }
 
-        opacity: 0;
-        transition: 0.5s;
-      }
+    .agent-name h1 {
+      opacity: 0;
+      position: absolute;
+      left: 73vw;
+      color: #e6ecaf;
+      font-size: 100px;
+      transition: 0.75s;
+    }
 
-      .agent-name h1 {
-        position: absolute;
-        left: 73vw;
-        /* top: -0px; */
-        color: #e6ecaf;
-        font-size: 100px;
-      }
+    .container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+    }
 
-      .container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 5%;
-      }
-      .agents {
-        /* width: 800px; */
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        /* border: 1px solid orange; */
-      }
-      .agents img {
-        margin: 5px;
-        border: 2px solid gray;
-        cursor: pointer;
-      }
-      /* 공통클래스 */
-      .visible {
-        opacity: 1;
-      }
-      .agents .selected {
-        border: 2px solid #e6ecaf;
-      }
-    </style>
-  </head>
+    .agents {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-  <body>
-    <!-- 요원 풀샷 -->
-    <img class="full-stand visible" src="./img/agent_full_jett.png" alt="" />
-    <img class="full-stand" src="./img/agent_full_astra.png" alt="" />
+    .agents img {
+      margin: 5px;
+      border: 2px solid gray;
+      cursor: pointer;
+    }
 
-    <div class="agent-name">
-      <h1>제트</h1>
-      <h1>아스트라</h1>
+    /* 공통클래스 */
+    .visible {
+      opacity: 1 !important;
+    }
+
+    .agents .selected {
+      border: 2px solid #e6ecaf;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 요원 풀샷 -->
+  <img class="full-stand visible jett" src="./img/agent_full_jett.png" alt="" />
+  <img class="full-stand breach" src="./img/agent_full_breach.png" alt="" />
+  <img class="full-stand astra" src="./img/agent_full_astra.png" alt="" />
+  <img class="full-stand brimstone" src="./img/agent_full_brimstone.png" alt="" />
+  <img class="full-stand sage" src="./img/agent_full_sage.png" alt="" />
+
+  <!-- 요원 이름 -->
+  <div class="agent-name">
+    <h1 class="visible jett">제트</h1>
+    <h1 class="breach">브리치</h1>
+    <h1 class="astra">아스트라</h1>
+    <h1 class="brimstone">브림스톤</h1>
+    <h1 class="sage">세이지</h1>
+  </div>
+
+  <!-- 요원 선택창 -->
+  <div class="container">
+    <img src="./img/pick-bar.png" alt="" />
+    <div class="agents">
+      <img class="selected jett" src="./img/agent_avatar_jett.png" alt="" />
+      <img class="breach" src="./img/agent_avatar_breach.png" alt="" />
+      <img class="astra" src="./img/agent_avatar_astra.png" alt="" />
+      <img class="brimstone" src="./img/agent_avatar_brimstone.png" alt="" />
+      <img class="sage" src="./img/agent_avatar_sage.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
     </div>
-    <!-- <h1>아스트라</h1> -->
+  </div>
 
-    <div class="container">
-      <img src="./img/pick-bar.png" alt="" />
-      <div class="agents">
-        <img class="selected" src="./img/agent_avatar_jett.png" alt="" />
-        <img src="./img/agent_avatar_astra.png" alt="" />
-        <img src="./img/agent_avatar_breach.png" alt="" />
-        <img src="./img/agent_avatar_brimstone.png" alt="" />
-        <img src="./img/agent_avatar_jett.png" alt="" />
-        <img src="./img/agent_avatar_jett.png" alt="" />
-        <img src="./img/agent_avatar_jett.png" alt="" />
-        <img src="./img/agent_avatar_jett.png" alt="" />
-        <img src="./img/agent_avatar_jett.png" alt="" />
-      </div>
-    </div>
+  <script>
 
-    <script></script>
-  </body>
+    // 요원 풀샷, 선택사진, 이름 전체 선택
+    const allAgentFullShot = document.querySelectorAll('.full-stand');
+    const allAgentName = document.querySelectorAll('.agent-name h1');
+    const allAgentAvatar = document.querySelectorAll('.agents img');
+
+    // 1단계 : 요원 각각 처리
+    /*
+    const jett = document.querySelectorAll('.jett');
+    const breach = document.querySelectorAll('.breach');
+
+    jett.forEach(element => {
+      element.addEventListener('click', () => {
+        allAgentFullShot.forEach(el => el.classList.remove('selected','visible'));
+        allAgentName.forEach(el => el.classList.remove('selected','visible'));
+        allAgentAvatar.forEach(el => el.classList.remove('selected','visible'));
+
+        jett.forEach(el => el.classList.add('selected','visible'));
+      });
+    });    
+
+    breach.forEach(element => {
+      element.addEventListener('click', () => {
+        allAgentFullShot.forEach(el => el.classList.remove('selected','visible'));
+        allAgentName.forEach(el => el.classList.remove('selected','visible'));
+        allAgentAvatar.forEach(el => el.classList.remove('selected','visible'));
+
+        breach.forEach(el => el.classList.add('selected','visible'));
+      });
+    }); 
+    */
+
+    // 2단계 : 요원 배열로 처리
+    const agents = ['jett', 'breach', 'astra', 'brimstone', 'sage'];
+
+    agents.forEach(agent => {
+      const elements = document.querySelectorAll(`.${agent}`); // 템플릿 리터럴로 요원클래스명 자리 갈아끼기
+      elements.forEach(element => {
+        element.addEventListener('click', () => {
+          allAgentFullShot.forEach(el => el.classList.remove('selected', 'visible'));
+          allAgentName.forEach(el => el.classList.remove('selected', 'visible'));
+          allAgentAvatar.forEach(el => el.classList.remove('selected', 'visible'));
+
+          elements.forEach(el => el.classList.add('selected', 'visible'));
+        });
+      });
+    });
+  </script>
+</body>
+
 </html>
