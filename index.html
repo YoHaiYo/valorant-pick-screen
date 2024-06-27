@@ -1,85 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant Pick Screen</title>
+    <style>
+      /* 기본 클래스 */
+      body {
+        margin: 0;
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valorant Pick Screen</title>
-  <style>
-    body {
-      margin: 0;
+        height: 100vh;
+        background-image: url(./img/valorant_pick_bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+      }
 
-      height: 100vh;
-      background-image: url(./img/valorant_pick_bg.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      overflow: hidden;
-    }
-    h1 {
-      position: absolute;
-      left: 73vw;
-      /* top: -0px; */
-      color: #E6ECAF;
-      font-size: 100px;
-    }
+      .full-stand {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
 
-    .container {      
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 5%;
-    }
-    .agents {
-      /* width: 800px; */
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      /* border: 1px solid orange; */
-    }
-    .agents img {
-      margin: 5px;
-      border: 2px solid gray;      
-      cursor: pointer;
-    }
-    
-    .full-stand {
-      position: absolute;
-      top: 0
-      /* height: 100px; */
-    }
+        opacity: 0;
+        transition: 0.5s;
+      }
 
-  </style>
-</head>
+      .agent-name h1 {
+        position: absolute;
+        left: 73vw;
+        /* top: -0px; */
+        color: #e6ecaf;
+        font-size: 100px;
+      }
 
-<body>
+      .container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
+      }
+      .agents {
+        /* width: 800px; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* border: 1px solid orange; */
+      }
+      .agents img {
+        margin: 5px;
+        border: 2px solid gray;
+        cursor: pointer;
+      }
+      /* 공통클래스 */
+      .visible {
+        opacity: 1;
+      }
+      .agents .selected {
+        border: 2px solid #e6ecaf;
+      }
+    </style>
+  </head>
 
- <!-- 요원 풀샷 -->
- <img class="full-stand" src="./img/agent_full_jett.png" alt="">
- <!-- <img class="full-stand" src="./img/agent_full_astra.png" alt=""> -->
+  <body>
+    <!-- 요원 풀샷 -->
+    <img class="full-stand visible" src="./img/agent_full_jett.png" alt="" />
+    <img class="full-stand" src="./img/agent_full_astra.png" alt="" />
 
-
-  <h1>제트</h1>
-  <!-- <h1>아스트라</h1> -->
-
-  <div class="container">
-    <img src="./img/pick-bar.png" alt="">
-    <div class="agents">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_astra.png" alt="">
-      <img src="./img/agent_avatar_breach.png" alt="">
-      <img src="./img/agent_avatar_brimstone.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
-      <img src="./img/agent_avatar_jett.png" alt="">
+    <div class="agent-name">
+      <h1>제트</h1>
+      <h1>아스트라</h1>
     </div>
-  </div>
+    <!-- <h1>아스트라</h1> -->
 
-  <script>
+    <div class="container">
+      <img src="./img/pick-bar.png" alt="" />
+      <div class="agents">
+        <img class="selected" src="./img/agent_avatar_jett.png" alt="" />
+        <img src="./img/agent_avatar_astra.png" alt="" />
+        <img src="./img/agent_avatar_breach.png" alt="" />
+        <img src="./img/agent_avatar_brimstone.png" alt="" />
+        <img src="./img/agent_avatar_jett.png" alt="" />
+        <img src="./img/agent_avatar_jett.png" alt="" />
+        <img src="./img/agent_avatar_jett.png" alt="" />
+        <img src="./img/agent_avatar_jett.png" alt="" />
+        <img src="./img/agent_avatar_jett.png" alt="" />
+      </div>
+    </div>
 
-  </script>
-</body>
-
+    <script></script>
+  </body>
 </html>
