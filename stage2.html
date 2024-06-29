@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,16 @@
       background-position: center center;
       overflow: hidden;
     }
-    
+
     .full-stand {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       margin: 0 auto;
+
+      opacity: 0;
+      transition: .75s;
     }
 
     .agent-name p {
@@ -28,8 +32,11 @@
       top: -20px;
       color: #e6ecaf;
       font-size: 100px;
+
+      opacity: 0;
+      transition: .75s;
     }
-    
+
     .container {
       position: absolute;
       left: 50%;
@@ -47,29 +54,40 @@
       margin: 5px;
       border: 2px solid gray;
       cursor: pointer;
+      
+      transition: 0.75s;
     }
 
+    /* 공통클래스 */
+    .selected {
+      opacity: 1 !important;
+    }
+
+    .agents .selected {
+      border: 2px solid #e6ecaf;
+    }
   </style>
 </head>
+
 <body>
-  <img class="full-stand" src="./img/agent_full_jett.png" alt="">
-  <img class="full-stand" src="./img/agent_full_breach.png" alt="" />
+  <img class="full-stand " src="./img/agent_full_jett.png" alt="">
+  <img class="full-stand selected" src="./img/agent_full_breach.png" alt="" />
   <img class="full-stand" src="./img/agent_full_astra.png" alt="" />
   <img class="full-stand" src="./img/agent_full_brimstone.png" alt="" />
   <img class="full-stand" src="./img/agent_full_sage.png" alt="" />
 
   <div class="agent-name">
-    <p>제트</p>
-    <p>브리치</p>
-    <p>아스트라</p>
-    <p>브림스톤</p>
-    <p>세이지</p>
+    <p class="selected">제트</p>
+    <p class="">브리치</p>
+    <p class="">아스트라</p>
+    <p class="">브림스톤</p>
+    <p class="">세이지</p>
   </div>
 
   <div class="container">
     <img src="./img/pick-bar.png" alt="">
     <div class="agents">
-      <img src="./img/agent_avatar_jett.png" alt="" />
+      <img class="selected" src="./img/agent_avatar_jett.png" alt="" />
       <img src="./img/agent_avatar_breach.png" alt="" />
       <img src="./img/agent_avatar_astra.png" alt="" />
       <img src="./img/agent_avatar_brimstone.png" alt="" />
@@ -81,4 +99,5 @@
     </div>
   </div>
 </body>
+
 </html>
