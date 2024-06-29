@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>발로란트 요원 선택</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url(./img/valorant_pick_bg.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden;
+    }
+    
+    .full-stand {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .agent-name p {
+      position: absolute;
+      left: 73vw;
+      top: -20px;
+      color: #e6ecaf;
+      font-size: 100px;
+    }
+    
+    .container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+    }
+
+    .agents {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .agents img {
+      margin: 5px;
+      border: 2px solid gray;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <img class="full-stand" src="./img/agent_full_jett.png" alt="">
+  <img class="full-stand" src="./img/agent_full_breach.png" alt="" />
+  <img class="full-stand" src="./img/agent_full_astra.png" alt="" />
+  <img class="full-stand" src="./img/agent_full_brimstone.png" alt="" />
+  <img class="full-stand" src="./img/agent_full_sage.png" alt="" />
+
+  <div class="agent-name">
+    <p>제트</p>
+    <p>브리치</p>
+    <p>아스트라</p>
+    <p>브림스톤</p>
+    <p>세이지</p>
+  </div>
+
+  <div class="container">
+    <img src="./img/pick-bar.png" alt="">
+    <div class="agents">
+      <img src="./img/agent_avatar_jett.png" alt="" />
+      <img src="./img/agent_avatar_breach.png" alt="" />
+      <img src="./img/agent_avatar_astra.png" alt="" />
+      <img src="./img/agent_avatar_brimstone.png" alt="" />
+      <img src="./img/agent_avatar_sage.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+      <img src="./img/agent_avatar_locked.png" alt="" />
+    </div>
+  </div>
+</body>
+</html>
