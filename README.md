@@ -5,4 +5,4 @@
 stage1 ~ stage3 파일은 강의의 단계별 과정이니 참고해주세요.
 
 ## 강의영상
-[강의바로보러가기](https://youtu.be/uVCsXGh80bM)
+[강의바로보러가기](https://youtu.be/6Y8TvHMVbrc)
